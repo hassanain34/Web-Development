@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+#wrapper-div {
+	max-width: 1200px;  /* Set a maximum width */
+	width: 100%;  /* Ensure full width */
+	margin: 0 auto;  /* Center the wrapper */
+	padding: 0 15px;  /* Add padding for small screens */
+}
+
+#logo-nav-div {
+	width: 100%;
+	min-height: 50px;
+	background-color: lightgray;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#logo-div, #nav-div {
+	flex: 1;  /* Flex items to take up space equally */
+	text-align: center;  /* Center text horizontally */
+}
+
+#logo-div {
+	line-height: 50px;
+}
+
+#nav-div {
+	line-height: 50px;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row {
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column {
+	flex: 1 1 20%;
+	margin: 0 5px;  /* Margin between columns */
+	background-color: lightgray;
+	min-height: 100px;
+}
+
+#boxes {
+	width: 100%;
+	min-height: 200px;
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.box {
+	flex: 1 1 calc(33.333% - 10px);  /* 3 boxes per row with spacing */
+	min-height: 200px;
+	background-color: lightgray;
+	text-align: center;
+	line-height: 150px;  /* Center text vertically */
+	margin: 0 5px;  /* Margin between boxes */
+}
+
+#footer {
+	width: 50%;  /* Set the footer width */
+	min-height: 50px;
+	background-color: lightgray;
+	margin: 10px auto;  /* Center the footer and add margin above and below */
+	text-align: center;
+}
+
+/* Responsive Design: Media Queries */
+@media (max-width: 1200px) {
+	#logo-nav-div {
+		flex-direction: column;  /* Stack logo and navigation vertically */
+	}
+	#logo-div, #nav-div {
+		width: 100%;  /* Full width for stacked layout */
+	}
+}
+
+@media (max-width: 768px) {
+	.column {
+		flex: 1 1 45%;  /* Adjust column width for smaller screens */
+	}
+	.box {
+		flex: 1 1 calc(50% - 10px);  /* 2 boxes per row with spacing */
+	}
+}
+
+@media (max-width: 480px) {
+	.column {
+		flex: 1 1 100%;  /* Full width columns for very small screens */
+	}
+	.box {
+		flex: 1 1 100%;  /* Full width boxes for very small screens */
+	}
+}
