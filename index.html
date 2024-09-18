@@ -3,47 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Layout Design</title>
-    <link rel="stylesheet" href="Style.css" />
+    <title>Interactive UI Components</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to CSS file -->
   </head>
   <body>
-    <div id="wrapper-div">
-      <div id="logo-nav-div" class="clearfix">
-        <div id="logo-div">logo</div>
-        <div id="nav-div">Navigation</div> 
-      </div>
-      <div class="row">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>    
-      </div>
-      <div class="row">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>    
-      </div>
-      <div class="row">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>    
-      </div>
-      <div class="row">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>    
-      </div>
-      <div id="boxes" class="clearfix">
-        <div class="box">Box1</div>
-        <div class="box">Box2</div>
-        <div class="box">Box3</div>
+    <h1>Interactive UI Components</h1>
+
+    <!-- Slider -->
+    <div class="slider-container">
+      <h2>Slider</h2>
+      <input type="range" min="0" max="100" value="70" id="slider" />
+      <p>Slider Value: <span id="slider-value">70</span></p>
+    </div>
+
+    <!-- Modal -->
+    <h2>Modal</h2>
+    <button id="open-modal">Open Modal</button>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <p>This is a modal window.</p>
       </div>
     </div>
-    <div id="footer">
-      Footer
+
+    <!-- Accordion -->
+    <h2>Accordion</h2>
+    <button class="accordion">Accordion Section 1</button>
+    <div class="panel">
+      <p>This is the content for section 1.</p>
     </div>
+
+    <button class="accordion">Accordion Section 2</button>
+    <div class="panel">
+      <p>This is the content for section 2.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- Link to JavaScript file -->
   </body>
 </html>
